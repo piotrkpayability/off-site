@@ -5,7 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 import { HomePage } from './home.page';
-
+import { HttpClientModule } from '@angular/common/http';
+import { AngularFirestoreModule } from "angularfire2/firestore";
 @NgModule({
   imports: [
     CommonModule,
@@ -16,8 +17,10 @@ import { HomePage } from './home.page';
         path: '',
         component: HomePage
       }
-    ])
+    ]),
+    HttpClientModule,
+    AngularFirestoreModule
   ],
   declarations: [HomePage]
 })
-export class HomePageModule {}
+export class HomePageModule { }
